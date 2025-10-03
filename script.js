@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.requestAnimationFrame(step);
     };
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    const counterObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting && entry.target.getAttribute('data-animated') !== 'true') {
                 const counter = entry.target;
@@ -80,7 +80,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.1 });
 
     counters.forEach(counter => {
-        observer.observe(counter);
+        counterObserver.observe(counter);
+    });
+
+    // --- New: Scroll-triggered animations ---
+    const animatedElements = document.querySelectorAll('.scroll-animate');
+
+    const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    animatedElements.forEach(element => {
+        scrollObserver.observe(element);
     });
 
     // --- Update Footer Year ---
