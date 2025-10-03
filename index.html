@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Paper Hug Initiative</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-cream-100 text-gray-800 antialiased">
+    
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="flex items-center space-x-2">
+          <svg class="h-8 w-8 text-orange-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21.382 2.618a1.5 1.5 0 00-2.121 0l-2.22 2.22-1.238-1.238a3 3 0 00-4.242 0L3 12.16V21h8.84l8.542-8.542a3 3 0 000-4.242l-1.238-1.238 2.22-2.22a1.5 1.5 0 000-2.121zM11.293 19H5v-6.293l6.293-6.293 4.5 4.5-5.255 5.255a1.5 1.5 0 000 2.121l.757.757zM17.5 9.207l-4.5-4.5 1.586-1.586a1.5 1.5 0 012.121 0l2.379 2.379a1.5 1.5 0 010 2.121L17.5 9.207z" />
+          </svg>
+          <span class="text-xl font-bold font-serif text-gray-800">The Paper Hug</span>
+        </a>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="#about" class="text-gray-600 hover:text-orange-500 transition-colors duration-300">Our Mission</a>
+          <a href="#how-it-works" class="text-gray-600 hover:text-orange-500 transition-colors duration-300">How It Works</a>
+          <a href="#impact" class="text-gray-600 hover:text-orange-500 transition-colors duration-300">Our Impact</a>
+          <a href="#get-involved" class="text-gray-600 hover:text-orange-500 transition-colors duration-300">Get Involved</a>
+        </nav>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-gray-800 focus:outline-none" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden bg-white">
+        <nav class="flex flex-col items-center space-y-4 py-4">
+          <a href="#about" class="text-gray-600 hover:text-orange-500 transition-colors duration-300">Our Mission</a>
+          <a href="#how-it-works" class="text-gray-600 hover:text-orange-500 transition-colors duration-300">How It Works</a>
+          <a href="#impact" class="text-gray-600 hover:text-orange-500 transition-colors duration-300">Our Impact</a>
+          <a href="#get-involved" class="text-gray-600 hover:text-orange-500 transition-colors duration-300">Get Involved</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="relative bg-cover bg-center h-[80vh] min-h-[500px] flex items-center text-white" style="background-image: url('https://picsum.photos/1600/900?image=1011')">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative container mx-auto px-6 text-center z-10">
+          <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-4 text-shadow">
+            The Paper Hug Initiative
+          </h1>
+          <p class="text-xl md:text-2xl font-light mb-8 text-shadow-sm">
+            Spreading smiles, one letter at a time.
+          </p>
+          <a href="#get-involved" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 duration-300 shadow-lg">
+            Nominate Someone
+          </a>
+        </div>
+      </section>
+
+      <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <svg class="h-12 w-12 text-orange-400 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            <h2 class="text-4xl font-bold text-gray-800">Bridging the Gap with Kindness</h2>
+            <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
+              In a hyper-connected digital world, chronic loneliness is a silent epidemic. We believe in the timeless power of the personal letter to foster genuine human connection.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="bg-cream-50 p-8 rounded-lg shadow-md">
+              <h3 class="text-2xl font-bold mb-4 text-orange-600">Our Vision</h3>
+              <p class="text-gray-700 leading-relaxed">
+                Our vision is a world where everyone feels seen, valued, and connected, regardless of their circumstances. We aim to combat digital isolation through the warmth and sincerity of a tangible message crafted just for them.
+              </p>
+            </div>
+            <div class="bg-cream-50 p-8 rounded-lg shadow-md">
+              <h3 class="text-2xl font-bold mb-4 text-orange-600">Our Mission</h3>
+              <p class="text-gray-700 leading-relaxed">
+                We collect heartfelt, positive messages and deliver them as beautifully printed letters to nominated individuals across India who are in need of encouragement, joy, and a reminder that they are not alone.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="py-20 bg-cream-50">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-800">Turning Words into Warmth</h2>
+            <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
+              Our process is simple, safe, and scalable, designed to deliver a personal touch in four easy steps.
+            </p>
+          </div>
+          <div class="max-w-2xl mx-auto">
+            <div class="relative pl-12 pb-8 border-l-2 border-orange-200">
+              <div class="absolute -left-6 top-0 h-12 w-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-xl font-bold text-gray-800">Step 1: Nomination</h3>
+                <p class="mt-2 text-gray-600">Anyone can fill out a simple, private form to nominate someone who could use a lift, providing a few anonymous details to help personalize the letter.</p>
+              </div>
+            </div>
+            <div class="relative pl-12 pb-8 border-l-2 border-orange-200">
+                <div class="absolute -left-6 top-0 h-12 w-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.5L15.232 5.232z" /></svg>
+                </div>
+                <div class="ml-4">
+                    <h3 class="text-xl font-bold text-gray-800">Step 2: Message Crafting</h3>
+                    <p class="mt-2 text-gray-600">Vetted volunteer 'Kindness Writers' read the anonymous stories and type a personalized, uplifting message of hope and encouragement.</p>
+                </div>
+            </div>
+            <div class="relative pl-12 pb-8 border-l-2 border-orange-200">
+                <div class="absolute -left-6 top-0 h-12 w-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <div class="ml-4">
+                    <h3 class="text-xl font-bold text-gray-800">Step 3: Quality and Care</h3>
+                    <p class="mt-2 text-gray-600">Every message is reviewed by our moderation team to ensure it is positive, appropriate, and formatted on beautiful, high-quality stationery.</p>
+                </div>
+            </div>
+            <div class="relative pl-12 border-l-2 border-transparent">
+                <div class="absolute -left-6 top-0 h-12 w-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                </div>
+                <div class="ml-4">
+                    <h3 class="text-xl font-bold text-gray-800">Step 4: Delivery</h3>
+                    <p class="mt-2 text-gray-600">The printed letter is placed in a warm, personally addressed envelope and sent via post, arriving as a wonderful, tangible surprise.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="who-we-serve" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800">A Paper Hug for Anyone</h2>
+                <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
+                    Our letters are for anyone who needs to feel a little less alone and a little more loved.
+                </p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="text-orange-500 w-16 h-16 mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 8.72a1.5 1.5 0 0 1 1.06.44l4 4a1.5 1.5 0 0 1-2.12 2.12l-1.88-1.88v5.09a1.5 1.5 0 0 1-3 0v-3.59l-1.79 1.8a1.5 1.5 0 0 1-2.12-2.12l4-4a1.5 1.5 0 0 1 1.06-.44zM8.5 3a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM5.52 6.25a1.5 1.5 0 0 1-1.4 2.25H2.5a1.5 1.5 0 0 1 0-3h1.62a1.5 1.5 0 0 1 1.4 2.25zM12 6.5a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 7 5h3.5a1.5 1.5 0 0 1 1.5 1.5zm-3.5 10H7a1.5 1.5 0 0 1 0-3h1.5a1.5 1.5 0 0 1 0 3z"/></svg></div>
+                    <h3 class="text-xl font-bold mb-2">Elderly Individuals</h3>
+                    <p class="text-gray-600">In nursing homes or living alone, who may feel isolated from family and friends.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="text-orange-500 w-16 h-16 mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-1 11h-4v4h-2v-4H7v-2h4V8h2v4h4v2z"/></svg></div>
+                    <h3 class="text-xl font-bold mb-2">Patients</h3>
+                    <p class="text-gray-600">Undergoing long-term hospital stays or treatments, in need of a dose of cheer.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="text-orange-500 w-16 h-16 mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm-1-8h2v4h-2zm0-4h2v2h-2z"/></svg></div>
+                    <h3 class="text-xl font-bold mb-2">Those Facing Challenges</h3>
+                    <p class="text-gray-600">Individuals grieving a loss or navigating mental health journeys.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="text-orange-500 w-16 h-16 mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
+                    <h3 class="text-xl font-bold mb-2">Unsung Heroes</h3>
+                    <p class="text-gray-600">Community members who deserve recognition for their quiet, selfless work.</p>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section id="impact" class="py-20 bg-cream-50">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-800">Measuring Smiles Delivered</h2>
+            <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
+              We measure our success not just in numbers, but in the human connections we foster.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <div class="animated-counter text-center bg-white p-6 rounded-lg shadow-md" data-target="5842">
+              <p class="text-5xl font-bold text-orange-500">0+</p>
+              <p class="text-lg text-gray-600 mt-2">Letters Sent</p>
+            </div>
+            <div class="animated-counter text-center bg-white p-6 rounded-lg shadow-md" data-target="350">
+              <p class="text-5xl font-bold text-orange-500">0+</p>
+              <p class="text-lg text-gray-600 mt-2">Active Volunteers</p>
+            </div>
+            <div class="animated-counter text-center bg-white p-6 rounded-lg shadow-md" data-target="7219">
+              <p class="text-5xl font-bold text-orange-500">0+</p>
+              <p class="text-lg text-gray-600 mt-2">Nominations Received</p>
+            </div>
+          </div>
+          <div class="max-w-4xl mx-auto">
+            <h3 class="text-3xl font-bold text-center mb-8 text-gray-800">Stories of Connection</h3>
+            <div class="space-y-8">
+              <blockquote class="bg-white p-8 rounded-lg shadow-lg relative">
+                <div class="absolute top-0 left-0 transform -translate-x-4 -translate-y-4 text-8xl text-orange-100 font-serif">“</div>
+                <p class="text-gray-700 italic leading-loose z-10 relative">
+                  "Receiving the letter was like a burst of sunshine on a cloudy day. I didn't know a stranger's words could mean so much. I've read it a dozen times. Thank you for reminding me I'm not forgotten."
+                </p>
+                <footer class="text-right mt-4 text-gray-600 font-medium">— A Recipient in Mumbai</footer>
+              </blockquote>
+               <blockquote class="bg-white p-8 rounded-lg shadow-lg relative">
+                <div class="absolute top-0 left-0 transform -translate-x-4 -translate-y-4 text-8xl text-orange-100 font-serif">“</div>
+                <p class="text-gray-700 italic leading-loose z-10 relative">
+                  "I nominated my grandmother who lives alone. The joy in her voice when she called to tell me about her 'paper hug' was priceless. This initiative is a beautiful bridge across distances."
+                </p>
+                <footer class="text-right mt-4 text-gray-600 font-medium">— A Nominator in Bangalore</footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="get-involved" class="py-20 bg-orange-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800">You Can Make a Difference</h2>
+                <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
+                    You have the power to make someone's day. Join us in our mission to spread kindness.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white rounded-lg shadow-xl p-8 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-orange-500 w-20 h-20 mb-4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-2 10H7v-2h10v2z"/></svg></div>
+                    <h3 class="text-2xl font-bold mb-4">Nominate Someone</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Know someone who could use a smile? Take two minutes to fill out our confidential nomination form.</p>
+                    <a href="#" class="inline-block w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full transition-colors duration-300">Nominate Now</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-xl p-8 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-orange-500 w-20 h-20 mb-4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg></div>
+                    <h3 class="text-2xl font-bold mb-4">Become a Kindness Writer</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Share your words of encouragement. Sign up to be a volunteer writer and help us spread joy.</p>
+                    <a href="#" class="inline-block w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full transition-colors duration-300">Sign Up</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-xl p-8 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-orange-500 w-20 h-20 mb-4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H8l4-5v4h3l-4 5z"/></svg></div>
+                    <h3 class="text-2xl font-bold mb-4">Support Our Mission</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">A small contribution helps cover printing, stationery, and postage. Help us deliver more smiles.</p>
+                    <a href="#" class="inline-block w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full transition-colors duration-300">Donate Today</a>
+                </div>
+            </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white">
+      <div class="container mx-auto px-6 py-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="text-center md:text-left mb-4 md:mb-0">
+            <h3 class="text-2xl font-serif">The Paper Hug Initiative</h3>
+            <p class="text-gray-400">Spreading smiles, one letter at a time.</p>
+          </div>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Facebook">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Twitter">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Instagram">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.795 2.013 10.148 2 12.315 2zm-1.161 1.545c-2.43.001-2.754.01-3.71.058-.942.048-1.503.21-1.916.379-.47.19-.844.43-1.215.799a3.495 3.495 0 00-.8 1.215c-.169.413-.331.974-.379 1.916-.048.956-.057 1.28-.058 3.71s.01 2.754.058 3.71c.048.942.21 1.503.379 1.916.19.47.43.844.799 1.215.37.37.746.59 1.215.799.413.169.974.331 1.916.379.956.048 1.28.057 3.71.058s2.754-.01 3.71-.058c.942-.048 1.503-.21 1.916-.379.47-.19.844.43 1.215-.799.37-.37.59-.746.799-1.215.169-.413.331-.974.379-1.916.048-.956.057-1.28.058-3.71s-.01-2.754-.058-3.71c-.048-.942-.21-1.503-.379-1.916a3.495 3.495 0 00-.799-1.215 3.495 3.495 0 00-1.215-.8c-.413-.169-.974-.331-1.916-.379-.956-.048-1.28-.057-3.71-.058zM12 6.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm5.338-9.87a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z" clip-rule="evenodd" /></svg>
+            </a>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-gray-700 pt-8 text-center text-gray-400">
+          <p>&copy; <span id="copyright-year">2024</span> The Paper Hug Initiative. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/916299389545"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contact us on WhatsApp"
+      class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 bg-[#25D366] text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300"
+    >
+      <svg class="w-7 h-7 md:w-8 md:h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.84 3.12 1.32 4.79 1.32h.01c5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zM17.2 14.25c-.22-.11-.76-.38-1.04-.47-.28-.09-.48-.04-.68.16-.2.2-.78.78-.96.94-.18.16-.36.18-.58.07-.22-.11-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.7-.14-.25-.01-.38.1-.5.1-.11.22-.28.33-.42.11-.14.15-.25.22-.41.07-.17.04-.31-.02-.42s-.48-1.15-.65-1.58c-.18-.42-.36-.36-.48-.36h-.4c-.12 0-.3.04-.45.2-.15.16.48.45.48 1.12 0 .68.49 1.3.56 1.4.07.11.99 1.58 2.4 2.2.34.15.6.24.81.31.21.07.4.06.55.04.17-.03.76-.31.87-.6.11-.3.11-.55.07-.6s-.11-.16-.23-.28z"/>
+      </svg>
+    </a>
+
+    <script src="script.js"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
