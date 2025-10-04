@@ -291,40 +291,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initTestimonialCarousel();
 
-    // --- FAQ Accordion ---
-    const initFaqAccordion = () => {
-        const accordion = document.getElementById('faq-accordion');
-        if (!accordion) return;
-
-        const faqQuestions = accordion.querySelectorAll('.faq-question');
-
-        faqQuestions.forEach(clickedButton => {
-            clickedButton.addEventListener('click', () => {
-                const wasExpanded = clickedButton.getAttribute('aria-expanded') === 'true';
-
-                // First, close all items.
-                faqQuestions.forEach(button => {
-                    button.setAttribute('aria-expanded', 'false');
-                    const answer = document.getElementById(button.getAttribute('aria-controls'));
-                    if (answer) {
-                        answer.style.maxHeight = null;
-                    }
-                });
-
-                // If the clicked item was not already open, then open it.
-                if (!wasExpanded) {
-                    clickedButton.setAttribute('aria-expanded', 'true');
-                    const answerToOpen = document.getElementById(clickedButton.getAttribute('aria-controls'));
-                    if (answerToOpen) {
-                        answerToOpen.style.maxHeight = answerToOpen.scrollHeight + 'px';
-                    }
-                }
-            });
-        });
-    };
-
-    initFaqAccordion();
-
     // --- Update Footer Year ---
     const yearSpan = document.getElementById('copyright-year');
     if (yearSpan) {

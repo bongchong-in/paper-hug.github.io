@@ -188,12 +188,3 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.05em;
   text-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
-
-/* --- FAQ Section Styles --- */
-.faq-answer {
-  transition: max-height 0.5s ease-in-out;
-}
-
-.faq-question[aria-expanded="true"] .faq-icon {
-  transform: rotate(180deg);
-}

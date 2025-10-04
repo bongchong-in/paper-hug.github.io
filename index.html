@@ -52,7 +52,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
+<link rel="stylesheet" href="/index.css">
 </head>
   <body class="bg-orange-50 text-slate-700 antialiased">
     
@@ -423,77 +423,53 @@
                     Have a question? We've got answers. If you don't find what you're looking for, feel free to reach out.
                 </p>
             </div>
-            <div class="max-w-4xl mx-auto space-y-4" id="faq-accordion">
-                <div class="scroll-animate delay-2 bg-white rounded-lg shadow-md border border-orange-100 overflow-hidden">
-                    <button class="faq-question w-full flex justify-between items-center text-left p-6 focus:outline-none focus:bg-orange-100 transition-colors duration-300" aria-expanded="false" aria-controls="faq-answer-1">
-                        <span class="text-lg font-semibold text-slate-800">What is Yours Truly?</span>
-                        <svg class="faq-icon w-6 h-6 text-orange-500 shrink-0 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                    </button>
-                    <div id="faq-answer-1" class="faq-answer max-h-0 overflow-hidden" role="region">
-                        <div class="p-6 pt-0 text-slate-600"><p>Yours Truly is a social impact project dedicated to combating loneliness and spreading joy. We send free, personal, and heartfelt letters to people who need encouragement, a reminder that they are valued, and a tangible piece of kindness in their mailbox.</p></div>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8" id="faq-accordion">
+                <div class="scroll-animate delay-2 bg-white p-6 rounded-lg shadow-md border border-orange-100">
+                    <h3 class="text-lg font-semibold text-slate-800 mb-2">What is Yours Truly?</h3>
+                    <div class="text-slate-600">
+                        <p>Yours Truly is a social impact project dedicated to combating loneliness and spreading joy. We send free, personal, and heartfelt letters to people who need encouragement, a reminder that they are valued, and a tangible piece of kindness in their mailbox.</p>
                     </div>
                 </div>
-                <div class="scroll-animate delay-2 bg-white rounded-lg shadow-md border border-orange-100 overflow-hidden">
-                    <button class="faq-question w-full flex justify-between items-center text-left p-6 focus:outline-none focus:bg-orange-100 transition-colors duration-300" aria-expanded="false" aria-controls="faq-answer-2">
-                        <span class="text-lg font-semibold text-slate-800">Who can I nominate to receive a letter?</span>
-                        <svg class="faq-icon w-6 h-6 text-orange-500 shrink-0 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                    </button>
-                    <div id="faq-answer-2" class="faq-answer max-h-0 overflow-hidden" role="region">
-                        <div class="p-6 pt-0 text-slate-600"><p>You can nominate anyone who you feel would benefit from a warm, encouraging letter. This includes elderly individuals, patients in hospitals, those facing mental health challenges, unsung community heroes, or simply anyone going through a tough time who needs to know someone cares.</p></div>
+                <div class="scroll-animate delay-2 bg-white p-6 rounded-lg shadow-md border border-orange-100">
+                    <h3 class="text-lg font-semibold text-slate-800 mb-2">Who can I nominate to receive a letter?</h3>
+                    <div class="text-slate-600">
+                        <p>You can nominate anyone who you feel would benefit from a warm, encouraging letter. This includes elderly individuals, patients in hospitals, those facing mental health challenges, unsung community heroes, or simply anyone going through a tough time who needs to know someone cares.</p>
                     </div>
                 </div>
-                <div class="scroll-animate delay-3 bg-white rounded-lg shadow-md border border-orange-100 overflow-hidden">
-                    <button class="faq-question w-full flex justify-between items-center text-left p-6 focus:outline-none focus:bg-orange-100 transition-colors duration-300" aria-expanded="false" aria-controls="faq-answer-3">
-                        <span class="text-lg font-semibold text-slate-800">Is it really free to nominate someone?</span>
-                        <svg class="faq-icon w-6 h-6 text-orange-500 shrink-0 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                    </button>
-                    <div id="faq-answer-3" class="faq-answer max-h-0 overflow-hidden" role="region">
-                        <div class="p-6 pt-0 text-slate-600"><p>Yes, absolutely. There is no cost to nominate someone or for the recipient to receive a letter. Our mission is funded by us and by donations from generous supporters who believe in the power of connection.</p></div>
+                <div class="scroll-animate delay-3 bg-white p-6 rounded-lg shadow-md border border-orange-100">
+                    <h3 class="text-lg font-semibold text-slate-800 mb-2">Is it really free to nominate someone?</h3>
+                    <div class="text-slate-600">
+                        <p>Yes, absolutely. There is no cost to nominate someone or for the recipient to receive a letter. Our mission is funded by us and by donations from generous supporters who believe in the power of connection.</p>
                     </div>
                 </div>
-                <div class="scroll-animate delay-3 bg-white rounded-lg shadow-md border border-orange-100 overflow-hidden">
-                    <button class="faq-question w-full flex justify-between items-center text-left p-6 focus:outline-none focus:bg-orange-100 transition-colors duration-300" aria-expanded="false" aria-controls="faq-answer-4">
-                        <span class="text-lg font-semibold text-slate-800">What information do I need to provide for a nomination?</span>
-                        <svg class="faq-icon w-6 h-6 text-orange-500 shrink-0 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                    </button>
-                    <div id="faq-answer-4" class="faq-answer max-h-0 overflow-hidden" role="region">
-                        <div class="p-6 pt-0 text-slate-600"><p>We require the nominee's name and full mailing address and some essential details to send the letter. This information is only used for facilitating the operations.</p></div>
+                <div class="scroll-animate delay-3 bg-white p-6 rounded-lg shadow-md border border-orange-100">
+                    <h3 class="text-lg font-semibold text-slate-800 mb-2">What information do I need to provide for a nomination?</h3>
+                    <div class="text-slate-600">
+                        <p>We require the nominee's name and full mailing address and some essential details to send the letter. This information is only used for facilitating the operations.</p>
                     </div>
                 </div>
-                <div class="scroll-animate delay-4 bg-white rounded-lg shadow-md border border-orange-100 overflow-hidden">
-                    <button class="faq-question w-full flex justify-between items-center text-left p-6 focus:outline-none focus:bg-orange-100 transition-colors duration-300" aria-expanded="false" aria-controls="faq-answer-5">
-                        <span class="text-lg font-semibold text-slate-800">How is the nominee's privacy protected?</span>
-                        <svg class="faq-icon w-6 h-6 text-orange-500 shrink-0 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                    </button>
-                    <div id="faq-answer-5" class="faq-answer max-h-0 overflow-hidden" role="region">
-                        <div class="p-6 pt-0 text-slate-600"><p>Protecting privacy is our top priority. The nominee's personal information is kept strictly confidential and is only accessible to our core team. We never share or sell data. All nominations are handled with the utmost care and discretion. For more details, please read our <a href="privacy-policy.html" target="_blank" rel="noopener noreferrer" class="text-orange-600 underline hover:text-orange-700">Privacy Policy</a>.</p></div>
+                <div class="scroll-animate delay-4 bg-white p-6 rounded-lg shadow-md border border-orange-100">
+                    <h3 class="text-lg font-semibold text-slate-800 mb-2">How is the nominee's privacy protected?</h3>
+                    <div class="text-slate-600">
+                        <p>Protecting privacy is our top priority. The nominee's personal information is kept strictly confidential and is only accessible to our core team. We never share or sell data. All nominations are handled with the utmost care and discretion. For more details, please read our <a href="privacy-policy.html" target="_blank" rel="noopener noreferrer" class="text-orange-600 underline hover:text-orange-700">Privacy Policy</a>.</p>
                     </div>
                 </div>
-                <div class="scroll-animate delay-4 bg-white rounded-lg shadow-md border border-orange-100 overflow-hidden">
-                    <button class="faq-question w-full flex justify-between items-center text-left p-6 focus:outline-none focus:bg-orange-100 transition-colors duration-300" aria-expanded="false" aria-controls="faq-answer-6">
-                        <span class="text-lg font-semibold text-slate-800">Who designs the letters?</span>
-                        <svg class="faq-icon w-6 h-6 text-orange-500 shrink-0 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                    </button>
-                    <div id="faq-answer-6" class="faq-answer max-h-0 overflow-hidden" role="region">
-                        <div class="p-6 pt-0 text-slate-600"><p>Our letters are crafted by a small, dedicated team of vetted designers who are passionate about our mission. Each writer is trained to compose graphics design, ensuring every letter is a source of genuine comfort and joy.</p></div>
+                <div class="scroll-animate delay-4 bg-white p-6 rounded-lg shadow-md border border-orange-100">
+                    <h3 class="text-lg font-semibold text-slate-800 mb-2">Who designs the letters?</h3>
+                    <div class="text-slate-600">
+                        <p>Our letters are crafted by a small, dedicated team of vetted designers who are passionate about our mission. Each writer is trained to compose graphics design, ensuring every letter is a source of genuine comfort and joy.</p>
                     </div>
                 </div>
-                <div class="scroll-animate delay-5 bg-white rounded-lg shadow-md border border-orange-100 overflow-hidden">
-                    <button class="faq-question w-full flex justify-between items-center text-left p-6 focus:outline-none focus:bg-orange-100 transition-colors duration-300" aria-expanded="false" aria-controls="faq-answer-7">
-                        <span class="text-lg font-semibold text-slate-800">Can I nominate someone anonymously?</span>
-                        <svg class="faq-icon w-6 h-6 text-orange-500 shrink-0 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                    </button>
-                    <div id="faq-answer-7" class="faq-answer max-h-0 overflow-hidden" role="region">
-                        <div class="p-6 pt-0 text-slate-600"><p>Yes. While we ask for your name, email and contact number on the nomination form (so we can contact you if there's an issue with the address), your identity will not be revealed to the letter recipient, if anonymity is opted. But, in case of legal issues we might be asked to provide details to concerned authority.</p></div>
+                <div class="scroll-animate delay-5 bg-white p-6 rounded-lg shadow-md border border-orange-100">
+                    <h3 class="text-lg font-semibold text-slate-800 mb-2">Can I nominate someone anonymously?</h3>
+                    <div class="text-slate-600">
+                        <p>Yes. While we ask for your name, email and contact number on the nomination form (so we can contact you if there's an issue with the address), your identity will not be revealed to the letter recipient, if anonymity is opted. But, in case of legal issues we might be asked to provide details to concerned authority.</p>
                     </div>
                 </div>
-                 <div class="scroll-animate delay-5 bg-white rounded-lg shadow-md border border-orange-100 overflow-hidden">
-                    <button class="faq-question w-full flex justify-between items-center text-left p-6 focus:outline-none focus:bg-orange-100 transition-colors duration-300" aria-expanded="false" aria-controls="faq-answer-8">
-                        <span class="text-lg font-semibold text-slate-800">How are donations used?</span>
-                        <svg class="faq-icon w-6 h-6 text-orange-500 shrink-0 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                    </button>
-                    <div id="faq-answer-8" class="faq-answer max-h-0 overflow-hidden" role="region">
-                        <div class="p-6 pt-0 text-slate-600"><p>Every single donation goes directly towards funding our mission. Contributions cover the costs of high-quality stationery, envelopes, postage stamps, and printing. This allows us to keep the entire service free for both nominators and recipients.</p></div>
+                 <div class="scroll-animate delay-5 bg-white p-6 rounded-lg shadow-md border border-orange-100">
+                    <h3 class="text-lg font-semibold text-slate-800 mb-2">How are donations used?</h3>
+                    <div class="text-slate-600">
+                        <p>Every single donation goes directly towards funding our mission. Contributions cover the costs of high-quality stationery, envelopes, postage stamps, and printing. This allows us to keep the entire service free for both nominators and recipients.</p>
                     </div>
                 </div>
             </div>
@@ -544,6 +520,6 @@
     </a>
 
     <script src="script.js"></script>
-
+<script type="module" src="/index.tsx"></script>
 </body>
 </html>
