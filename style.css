@@ -54,3 +54,136 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 0;
   line-height: 1;
 }
+
+/* --- Partner Carousel Styles --- */
+#partner-track {
+  will-change: transform;
+}
+
+.partner-card {
+  flex-shrink: 0;
+  width: 220px;
+  height: 120px;
+  margin: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 0.75rem; /* rounded-xl */
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-lg */
+  border: 1px solid #fed7aa; /* border-orange-200 */
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 1rem;
+  text-align: center;
+}
+
+.partner-card a,
+.partner-card span {
+  font-size: 1.25rem; /* Equivalent to text-xl */
+  line-height: 1.75rem;
+}
+
+.partner-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* shadow-xl */
+}
+
+/* Add a gradient overlay for the carousel edges to fade out */
+#partner-carousel-wrapper::before,
+#partner-carousel-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5rem; /* w-20 */
+    z-index: 5;
+    pointer-events: none;
+}
+
+#partner-carousel-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #fff7ed, transparent); /* bg-orange-50 */
+}
+
+#partner-carousel-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #fff7ed, transparent); /* bg-orange-50 */
+}
+
+/* --- Testimonial Carousel Styles --- */
+#testimonial-track {
+  will-change: transform;
+}
+
+.testimonial-card {
+  flex-shrink: 0;
+  width: 90%;
+  max-width: 420px;
+  margin: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .testimonial-card {
+        width: 380px;
+    }
+}
+
+.testimonial-card blockquote::before {
+  content: '“';
+  position: absolute;
+  top: -0.5rem;
+  left: 0.5rem;
+  font-size: 6rem;
+  font-family: 'Playfair Display', serif;
+  color: #fed7aa; /* orange-200 */
+  z-index: 0;
+  line-height: 1;
+}
+
+#testimonial-carousel-wrapper::before,
+#testimonial-carousel-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4rem; /* w-16 */
+    z-index: 5;
+    pointer-events: none;
+}
+
+#testimonial-carousel-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #fff7ed, transparent); /* bg-orange-50 */
+}
+
+#testimonial-carousel-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #fff7ed, transparent); /* bg-orange-50 */
+}
+
+/* --- Hero Title Style --- */
+.hero-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 5rem;
+  line-height: 1.1;
+  background: linear-gradient(145deg, #ffedd5, #fcd34d); /* orange-100 to amber-300 */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 8rem;
+  }
+}
+
+/* --- Highlight 'free' word in hero --- */
+.highlight-free {
+  font-weight: 700;
+  color: #fcd34d; /* amber-300 */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}

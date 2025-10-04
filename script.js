@@ -99,6 +99,198 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollObserver.observe(element);
     });
 
+    // --- Partner Carousel ---
+    const initPartnerCarousel = () => {
+        const wrapper = document.getElementById('partner-carousel-wrapper');
+        if (!wrapper) return;
+
+        const track = document.getElementById('partner-track');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        if (!track || !prevBtn || !nextBtn || track.children.length === 0) {
+            if (wrapper) wrapper.style.display = 'none'; // Hide carousel if no items
+            return;
+        }
+
+        const originalCards = Array.from(track.children);
+        const cardCount = originalCards.length;
+
+        // Clone cards for seamless looping and append them
+        originalCards.forEach(card => {
+            const clone = card.cloneNode(true);
+            clone.setAttribute('aria-hidden', 'true');
+            track.appendChild(clone);
+        });
+
+        let currentIndex = 0;
+        let intervalId;
+        const cardStyle = window.getComputedStyle(originalCards[0]);
+        const cardMargin = parseInt(cardStyle.marginLeft, 10) + parseInt(cardStyle.marginRight, 10);
+        const cardWidth = originalCards[0].offsetWidth + cardMargin;
+        
+        const move = () => {
+            currentIndex++;
+            track.style.transition = 'transform 0.5s ease-in-out';
+            track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            
+            if (currentIndex >= cardCount) {
+                setTimeout(() => {
+                    track.style.transition = 'none';
+                    currentIndex = 0;
+                    track.style.transform = `translateX(0)`;
+                }, 500); // This duration must match the CSS transition duration
+            }
+        };
+
+        const startAutoScroll = () => {
+            stopAutoScroll(); // Ensure no multiple intervals are running
+            intervalId = setInterval(move, 3000);
+        };
+        
+        const stopAutoScroll = () => {
+            clearInterval(intervalId);
+        };
+        
+        nextBtn.addEventListener('click', () => {
+            stopAutoScroll();
+            move();
+            startAutoScroll();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            stopAutoScroll();
+            
+            if (currentIndex === 0) {
+                track.style.transition = 'none';
+                currentIndex = cardCount;
+                track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            
+                setTimeout(() => {
+                    track.style.transition = 'transform 0.5s ease-in-out';
+                    currentIndex--;
+                    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+                }, 20); // A small delay is enough to re-enable transition
+            } else {
+                currentIndex--;
+                track.style.transition = 'transform 0.5s ease-in-out';
+                track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            }
+            
+            startAutoScroll();
+        });
+        
+        wrapper.addEventListener('mouseenter', stopAutoScroll);
+        wrapper.addEventListener('mouseleave', startAutoScroll);
+
+        startAutoScroll();
+    };
+
+    initPartnerCarousel();
+
+    // --- Testimonial Carousel ---
+    const initTestimonialCarousel = () => {
+        const wrapper = document.getElementById('testimonial-carousel-wrapper');
+        if (!wrapper) return;
+
+        const track = document.getElementById('testimonial-track');
+        const prevBtn = document.getElementById('testimonial-prev-btn');
+        const nextBtn = document.getElementById('testimonial-next-btn');
+
+        if (!track || !prevBtn || !nextBtn || track.children.length === 0) {
+            if (wrapper) wrapper.style.display = 'none';
+            return;
+        }
+
+        const originalCards = Array.from(track.children);
+        const cardCount = originalCards.length;
+
+        // Clone cards for seamless looping
+        originalCards.forEach(card => {
+            const clone = card.cloneNode(true);
+            clone.setAttribute('aria-hidden', 'true');
+            track.appendChild(clone);
+        });
+
+        let currentIndex = 0;
+        let intervalId;
+
+        const getCardWidth = () => {
+            if (originalCards.length === 0) return 0;
+            const cardStyle = window.getComputedStyle(originalCards[0]);
+            const cardMargin = parseInt(cardStyle.marginLeft, 10) + parseInt(cardStyle.marginRight, 10);
+            return originalCards[0].offsetWidth + cardMargin;
+        }
+
+        let cardWidth = getCardWidth();
+
+        const move = () => {
+            currentIndex++;
+            track.style.transition = 'transform 0.5s ease-in-out';
+            track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            
+            if (currentIndex >= cardCount) {
+                setTimeout(() => {
+                    track.style.transition = 'none';
+                    currentIndex = 0;
+                    track.style.transform = `translateX(0)`;
+                }, 500);
+            }
+        };
+
+        const startAutoScroll = () => {
+            stopAutoScroll();
+            intervalId = setInterval(move, 4000); // Slower speed for testimonials
+        };
+        
+        const stopAutoScroll = () => {
+            clearInterval(intervalId);
+        };
+        
+        nextBtn.addEventListener('click', () => {
+            stopAutoScroll();
+            move();
+            startAutoScroll();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            stopAutoScroll();
+            
+            if (currentIndex === 0) {
+                track.style.transition = 'none';
+                currentIndex = cardCount;
+                track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            
+                setTimeout(() => {
+                    track.style.transition = 'transform 0.5s ease-in-out';
+                    currentIndex--;
+                    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+                }, 20);
+            } else {
+                currentIndex--;
+                track.style.transition = 'transform 0.5s ease-in-out';
+                track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            }
+            
+            startAutoScroll();
+        });
+        
+        wrapper.addEventListener('mouseenter', stopAutoScroll);
+        wrapper.addEventListener('mouseleave', startAutoScroll);
+
+        window.addEventListener('resize', () => {
+            stopAutoScroll();
+            track.style.transition = 'none';
+            cardWidth = getCardWidth();
+            track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            startAutoScroll();
+        });
+
+        startAutoScroll();
+    };
+
+    initTestimonialCarousel();
+
     // --- Update Footer Year ---
     const yearSpan = document.getElementById('copyright-year');
     if (yearSpan) {
