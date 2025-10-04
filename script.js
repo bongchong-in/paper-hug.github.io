@@ -298,31 +298,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const faqQuestions = accordion.querySelectorAll('.faq-question');
 
-        faqQuestions.forEach(button => {
-            button.addEventListener('click', () => {
-                const answerPanel = document.getElementById(button.getAttribute('aria-controls'));
-                if (!answerPanel) return;
+        faqQuestions.forEach(clickedButton => {
+            clickedButton.addEventListener('click', () => {
+                const wasExpanded = clickedButton.getAttribute('aria-expanded') === 'true';
 
-                const isCurrentlyExpanded = button.getAttribute('aria-expanded') === 'true';
-
-                // If the item is currently expanded, close it.
-                if (isCurrentlyExpanded) {
+                // First, close all items.
+                faqQuestions.forEach(button => {
                     button.setAttribute('aria-expanded', 'false');
-                    answerPanel.style.maxHeight = null;
-                } else {
-                    // Otherwise, first close any other panel that might be open.
-                    const currentlyOpenButton = accordion.querySelector('.faq-question[aria-expanded="true"]');
-                    if (currentlyOpenButton) {
-                        currentlyOpenButton.setAttribute('aria-expanded', 'false');
-                        const openAnswerPanel = document.getElementById(currentlyOpenButton.getAttribute('aria-controls'));
-                        if (openAnswerPanel) {
-                            openAnswerPanel.style.maxHeight = null;
-                        }
+                    const answer = document.getElementById(button.getAttribute('aria-controls'));
+                    if (answer) {
+                        answer.style.maxHeight = null;
                     }
+                });
 
-                    // Then, open the clicked panel.
-                    button.setAttribute('aria-expanded', 'true');
-                    answerPanel.style.maxHeight = answerPanel.scrollHeight + 'px';
+                // If the clicked item was not already open, then open it.
+                if (!wasExpanded) {
+                    clickedButton.setAttribute('aria-expanded', 'true');
+                    const answerToOpen = document.getElementById(clickedButton.getAttribute('aria-controls'));
+                    if (answerToOpen) {
+                        answerToOpen.style.maxHeight = answerToOpen.scrollHeight + 'px';
+                    }
                 }
             });
         });
