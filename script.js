@@ -305,21 +305,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const isCurrentlyExpanded = button.getAttribute('aria-expanded') === 'true';
 
-                // If clicking an already open panel, just close it.
+                // If the item is currently expanded, close it.
                 if (isCurrentlyExpanded) {
                     button.setAttribute('aria-expanded', 'false');
                     answerPanel.style.maxHeight = null;
                 } else {
-                    // Otherwise, first close all other panels...
-                    faqQuestions.forEach(otherButton => {
-                        otherButton.setAttribute('aria-expanded', 'false');
-                        const otherPanel = document.getElementById(otherButton.getAttribute('aria-controls'));
-                        if (otherPanel) {
-                            otherPanel.style.maxHeight = null;
+                    // Otherwise, first close any other panel that might be open.
+                    const currentlyOpenButton = accordion.querySelector('.faq-question[aria-expanded="true"]');
+                    if (currentlyOpenButton) {
+                        currentlyOpenButton.setAttribute('aria-expanded', 'false');
+                        const openAnswerPanel = document.getElementById(currentlyOpenButton.getAttribute('aria-controls'));
+                        if (openAnswerPanel) {
+                            openAnswerPanel.style.maxHeight = null;
                         }
-                    });
+                    }
 
-                    // ...and then open the one that was clicked.
+                    // Then, open the clicked panel.
                     button.setAttribute('aria-expanded', 'true');
                     answerPanel.style.maxHeight = answerPanel.scrollHeight + 'px';
                 }
