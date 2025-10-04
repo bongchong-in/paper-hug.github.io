@@ -291,6 +291,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initTestimonialCarousel();
 
+    // --- FAQ Accordion ---
+    const initFaqAccordion = () => {
+        const accordion = document.getElementById('faq-accordion');
+        if (!accordion) return;
+
+        const faqQuestions = accordion.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(button => {
+            button.addEventListener('click', () => {
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                const answerPanel = document.getElementById(button.getAttribute('aria-controls'));
+
+                // Close all other items
+                faqQuestions.forEach(otherButton => {
+                    if (otherButton !== button) {
+                        otherButton.setAttribute('aria-expanded', 'false');
+                        const otherAnswer = document.getElementById(otherButton.getAttribute('aria-controls'));
+                        otherAnswer.style.maxHeight = null;
+                    }
+                });
+
+                // Toggle the clicked item
+                if (isExpanded) {
+                    button.setAttribute('aria-expanded', 'false');
+                    answerPanel.style.maxHeight = null;
+                } else {
+                    button.setAttribute('aria-expanded', 'true');
+                    answerPanel.style.maxHeight = answerPanel.scrollHeight + 'px';
+                }
+            });
+        });
+    };
+
+    initFaqAccordion();
+
     // --- Update Footer Year ---
     const yearSpan = document.getElementById('copyright-year');
     if (yearSpan) {
