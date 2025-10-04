@@ -300,23 +300,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
         faqQuestions.forEach(button => {
             button.addEventListener('click', () => {
-                const isExpanded = button.getAttribute('aria-expanded') === 'true';
                 const answerPanel = document.getElementById(button.getAttribute('aria-controls'));
+                if (!answerPanel) return;
 
-                // Close all other items
-                faqQuestions.forEach(otherButton => {
-                    if (otherButton !== button) {
-                        otherButton.setAttribute('aria-expanded', 'false');
-                        const otherAnswer = document.getElementById(otherButton.getAttribute('aria-controls'));
-                        otherAnswer.style.maxHeight = null;
-                    }
-                });
+                const isCurrentlyExpanded = button.getAttribute('aria-expanded') === 'true';
 
-                // Toggle the clicked item
-                if (isExpanded) {
+                // If clicking an already open panel, just close it.
+                if (isCurrentlyExpanded) {
                     button.setAttribute('aria-expanded', 'false');
                     answerPanel.style.maxHeight = null;
                 } else {
+                    // Otherwise, first close all other panels...
+                    faqQuestions.forEach(otherButton => {
+                        otherButton.setAttribute('aria-expanded', 'false');
+                        const otherPanel = document.getElementById(otherButton.getAttribute('aria-controls'));
+                        if (otherPanel) {
+                            otherPanel.style.maxHeight = null;
+                        }
+                    });
+
+                    // ...and then open the one that was clicked.
                     button.setAttribute('aria-expanded', 'true');
                     answerPanel.style.maxHeight = answerPanel.scrollHeight + 'px';
                 }
